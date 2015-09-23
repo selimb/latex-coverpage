@@ -20,8 +20,6 @@ for root, _, filenames in os.walk('latex-coverpage'):
             os.path.join(TEMPLATE_ROOT, root),
             [os.path.join(root, f) for f in filenames]
     ) )
-for d in data_files:
-    print(d)
 setup(
     name='coverpage',
     version='0.1.0',
