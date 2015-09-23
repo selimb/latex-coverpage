@@ -27,7 +27,7 @@ def main():
     course_code = chosen_course[0]
     course_name = chosen_course[1]
     repo_name = 'tex'
-    print(TEMPLATE_DIR)
+    print('Using template at: %s' % TEMPLATE_DIR)
 
     cookiecutter(
         TEMPLATE_DIR,
