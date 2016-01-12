@@ -7,9 +7,8 @@ from .constants import TEMPLATE_DIR
 TEMPLATE_DIR = os.path.expanduser(TEMPLATE_DIR)
 
 COURSES = [
-    ('COMP 540', 'Matrix Computations'),
-    ('MATH 578', 'Numerical Analysis'),
-    ('MECH 533', 'Subsonic Aerodynamics'),
+    ('MECH 546', 'Finite Element Methods in Solid Mechanics'),
+    ('MECH 539', 'Computational Aerodynamics'),
 ]
 
 @click.command()
@@ -22,7 +21,7 @@ def main():
         type=click.IntRange(min=0, max=len(COURSES) - 1)
     )
     print('Title:')
-    title = prompt() 
+    title = prompt()
     chosen_course = COURSES[chosen_idx]
     course_code = chosen_course[0]
     course_name = chosen_course[1]
